@@ -1,0 +1,24 @@
+model Model
+	culture: es-ES
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-CL
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["convocatorias"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.140.1577.0 (25.02)+00af0910c5ca19a229c472b0dfc17a2c488f6b0a
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table convocatorias
+ref table DateTableTemplate_2648cb8d-3bc6-4dba-b74d-64f1e8b2295a
+ref table LocalDateTable_6925f7f0-1a6a-48b2-8996-62c59ca79f9f
+ref table LocalDateTable_09105ff4-8965-4c45-8910-0044091fc7f0
+ref table LocalDateTable_63de9c01-008e-462c-8ab0-55fd2fe51c44
+
+ref cultureInfo es-ES
+

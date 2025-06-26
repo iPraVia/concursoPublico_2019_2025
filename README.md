@@ -1,0 +1,8 @@
+﻿#### ConcursoPublico_2019_2025
+
+El siguiente es un analisis de los datos construido en Python de concursos publicos es Chile para los año 2019 al 2015, con vizualizaciones por año, regiones, ministerios y cargos. 
+
+Como producto final se obtiene un dashboard interactivo construido con Power Bi enfocado en los ministerios y cargos publicos a postular.
+
+<img src="" width=700 >
+

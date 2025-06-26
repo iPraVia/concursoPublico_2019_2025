@@ -1,0 +1,95 @@
+{
+  "config": "{\"version\":\"5.61\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.61\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "d82cfc130b9c2509058e",
+      "config": "{}",
+      "name": "1b61f307c6d2b400308c",
+      "referenceScope": 1
+    }
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Página 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "d82cfc130b9c2509058e",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1572839256537488b780\",\"layouts\":[{\"id\":0,\"position\":{\"x\":640,\"y\":0,\"z\":2002,\"width\":640,\"height\":720,\"tabOrder\":2002}}],\"singleVisual\":{\"visualType\":\"treemap\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(convocatorias.Cantidad Vacantes)\"}],\"Group\":[{\"queryRef\":\"convocatorias.Ministerio\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"convocatorias\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Cantidad Vacantes\"}},\"Function\":5},\"Name\":\"Sum(convocatorias.Cantidad Vacantes)\",\"NativeReferenceName\":\"Recuento de Cantidad Vacantes\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Ministerio\"},\"Name\":\"convocatorias.Ministerio\",\"NativeReferenceName\":\"Ministerio\"}]},\"columnProperties\":{\"Sum(convocatorias.Cantidad Vacantes)\":{\"formatString\":\"G\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"layout\":[{\"properties\":{\"tilingMethod\":{\"expr\":{\"Literal\":{\"Value\":\"'binary'\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"3L\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"convocatorias\"}},\"Property\":\"Cantidad Vacantes\"}},\"Function\":0}},\"type\":\"Advanced\",\"howCreated\":1,\"isHiddenInViewMode\":false},{\"expression\":{\"Arithmetic\":{\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"convocatorias\"}},\"Property\":\"Cantidad Vacantes\"}},\"Function\":5}},\"Right\":{\"ScopedEval\":{\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"convocatorias\"}},\"Property\":\"Cantidad Vacantes\"}},\"Function\":5}},\"Scope\":[]}},\"Operator\":3}},\"type\":\"Advanced\",\"howCreated\":1,\"isHiddenInViewMode\":false}]",
+          "height": 720.00,
+          "width": 640.00,
+          "x": 640.00,
+          "y": 0.00,
+          "z": 2002.00
+        },
+        {
+          "config": "{\"name\":\"3257c91210ae8cbc470e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":138.33333333333334,\"z\":0,\"width\":640,\"height\":298.33333333333337,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"convocatorias.Año\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(convocatorias.Cantidad Vacantes)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"convocatorias\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Año\"},\"Name\":\"convocatorias.Año\",\"NativeReferenceName\":\"Suma de Año\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Cantidad Vacantes\"}},\"Function\":0},\"Name\":\"Sum(convocatorias.Cantidad Vacantes)\",\"NativeReferenceName\":\"Cantidad Vacantes\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Cantidad Vacantes\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(convocatorias.Cantidad Vacantes)\":{\"displayName\":\"Cantidad Vacantes\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"lineStyles\":[{\"properties\":{\"showMarker\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"markerShape\":{\"expr\":{\"Literal\":{\"Value\":\"'square'\"}}},\"markerColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#DB7B43'\"}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Vacantes por Año'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[{\"name\":\"933a02ad1239b8512c3d\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"convocatorias\"}},\"Property\":\"Año\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"convocatorias\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Año\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"2019L\"}}],[{\"Literal\":{\"Value\":\"2020L\"}}],[{\"Literal\":{\"Value\":\"2021L\"}}],[{\"Literal\":{\"Value\":\"2022L\"}}],[{\"Literal\":{\"Value\":\"2023L\"}}],[{\"Literal\":{\"Value\":\"2024L\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{},\"isHiddenInViewMode\":false}]",
+          "height": 298.33,
+          "width": 640.00,
+          "x": 0.00,
+          "y": 138.33,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"9ee93950edca5616a546\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":436.25,\"z\":2003,\"width\":640,\"height\":283.75,\"tabOrder\":2003}}],\"singleVisual\":{\"visualType\":\"scatterChart\",\"projections\":{\"X\":[{\"queryRef\":\"convocatorias.Cantidad Vacantes\",\"active\":true}],\"Y\":[{\"queryRef\":\"convocatorias.Número Postulaciones\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"convocatorias\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Cantidad Vacantes\"},\"Name\":\"convocatorias.Cantidad Vacantes\",\"NativeReferenceName\":\"Suma de Cantidad Vacantes\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Número Postulaciones\"},\"Name\":\"convocatorias.Número Postulaciones\",\"NativeReferenceName\":\"Número Postulaciones\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"trend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"displayName\":{\"expr\":{\"Literal\":{\"Value\":\"'Línea de tendencia 1'\"}}},\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FF0000'\"}}}}},\"style\":{\"expr\":{\"Literal\":{\"Value\":\"'dotted'\"}}},\"width\":{\"expr\":{\"Literal\":{\"Value\":\"3D\"}}},\"autoScale\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"2D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 283.75,
+          "width": 640.00,
+          "x": 0.00,
+          "y": 436.25,
+          "z": 2003.00
+        },
+        {
+          "config": "{\"name\":\"a19e71cbe312062d4b0d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":468.33333333333337,\"y\":0,\"z\":2005,\"width\":171.66666666666669,\"height\":138.33333333333334,\"tabOrder\":2005}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(convocatorias.Cantidad Vacantes)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"convocatorias\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Cantidad Vacantes\"}},\"Function\":0},\"Name\":\"Sum(convocatorias.Cantidad Vacantes)\",\"NativeReferenceName\":\"Suma de Cantidad Vacantes\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Cantidad Vacantes\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0.2}}}}}},\"selector\":{\"metadata\":\"Sum(convocatorias.Cantidad Vacantes)\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Vacantes'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"20D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Calibri'\"}}},\"underline\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 138.33,
+          "width": 171.67,
+          "x": 468.33,
+          "y": 0.00,
+          "z": 2005.00
+        },
+        {
+          "config": "{\"name\":\"a757c5b10039743850d8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":100,\"height\":40,\"z\":2000,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'back'\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 100.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"acda2d8091da8c96bd92\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":2004,\"width\":468.33333333333337,\"height\":138.33333333333334,\"tabOrder\":2004}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(convocatorias.Cargo)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"convocatorias\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Cargo\"}},\"Function\":3},\"Name\":\"Min(convocatorias.Cargo)\",\"NativeReferenceName\":\"Primera fecha: Cargo\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"18D\"}}},\"italic\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Calibri'\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"general\":[{\"properties\":{\"altText\":{\"expr\":{\"Literal\":{\"Value\":\"''\"}}}}}],\"visualTooltip\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Cargo mas postulado'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Calibri'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"20D\"}}},\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"heading\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}},\"underline\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"spacing\":[{\"properties\":{\"verticalSpacing\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"customizeSpacing\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 138.33,
+          "width": 468.33,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 2004.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+table convocatorias
+	lineageTag: 9afcc494-200d-46cf-822e-b13273c80a09
+
+	column 'ID Convocatoria'
+		dataType: int64
+		formatString: 0
+		lineageTag: cc42f13a-11bf-4fb2-9d09-14abb3737009
+		summarizeBy: sum
+		sourceColumn: ID Convocatoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fecha Inicio Convocatoria'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 89e0c027-1294-4799-921f-de54e65d1d7b
+		summarizeBy: none
+		sourceColumn: Fecha Inicio Convocatoria
+
+		variation Variación
+			isDefault
+			relationship: 4385bf44-8677-4dc7-afa6-7a6f164525cb
+			defaultHierarchy: LocalDateTable_6925f7f0-1a6a-48b2-8996-62c59ca79f9f.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Fecha Cierre Convocatoria'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: eaf4e973-a751-4ce7-b3dc-87c7091f98da
+		summarizeBy: none
+		sourceColumn: Fecha Cierre Convocatoria
+
+		variation Variación
+			isDefault
+			relationship: ae080806-bc3a-4ee2-87ed-2b7dc989ca55
+			defaultHierarchy: LocalDateTable_09105ff4-8965-4c45-8910-0044091fc7f0.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fecha Final Proceso'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 75408093-0ac0-4ece-88bd-77058e6816da
+		summarizeBy: none
+		sourceColumn: Fecha Final Proceso
+
+		variation Variación
+			isDefault
+			relationship: 119bc2b3-9d81-4a54-97ad-9dffad06e8d6
+			defaultHierarchy: LocalDateTable_63de9c01-008e-462c-8ab0-55fd2fe51c44.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ministerio
+		dataType: string
+		lineageTag: 7758969c-c402-4de3-9d37-b50f6b9c2123
+		summarizeBy: none
+		sourceColumn: Ministerio
+
+		annotation SummarizationSetBy = Automatic
+
+	column Servicio
+		dataType: string
+		lineageTag: 4030b88f-61d2-4d2f-8841-7bac78cbaf2c
+		summarizeBy: none
+		sourceColumn: Servicio
+
+		annotation SummarizationSetBy = Automatic
+
+	column Entidad
+		dataType: string
+		lineageTag: 2a76c21e-cc27-493d-b1ca-fe3d2eb1daae
+		summarizeBy: none
+		sourceColumn: Entidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo Base'
+		dataType: string
+		lineageTag: a667a2af-6555-4406-beeb-aa408607adc0
+		summarizeBy: none
+		sourceColumn: Tipo Base
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Área de Trabajo'
+		dataType: string
+		lineageTag: c711d7f1-ddf4-46e2-a526-22176164e439
+		summarizeBy: none
+		sourceColumn: Área de Trabajo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo de Vacante'
+		dataType: string
+		lineageTag: 0a857ab2-6109-4f4b-8808-1c160151b8c9
+		summarizeBy: none
+		sourceColumn: Tipo de Vacante
+
+		annotation SummarizationSetBy = Automatic
+
+	column Estamento
+		dataType: string
+		lineageTag: 436d2942-bc94-41a7-ad2c-1246ea3d3354
+		summarizeBy: none
+		sourceColumn: Estamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cargo
+		dataType: string
+		lineageTag: 7d17c2b3-434e-43cd-a7a6-3d3ba00bf020
+		summarizeBy: none
+		sourceColumn: Cargo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Región del Cargo'
+		dataType: string
+		lineageTag: e55d6eef-0ea4-41fd-82e2-a7f5783b9730
+		summarizeBy: none
+		sourceColumn: Región del Cargo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cantidad Vacantes'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4cd1c96f-4dca-43b7-ba63-e2c7a15bb146
+		summarizeBy: sum
+		sourceColumn: Cantidad Vacantes
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Número Postulaciones'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5d1b53fb-fe9d-4bb7-8038-d681d1d631fd
+		summarizeBy: count
+		sourceColumn: Número Postulaciones
+
+		annotation SummarizationSetBy = User
+
+	column Año
+		dataType: int64
+		formatString: 0
+		lineageTag: ccaf9fc2-ad83-489e-ab59-9bfde27518c9
+		summarizeBy: sum
+		sourceColumn: Año
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes
+		dataType: string
+		lineageTag: aa05f9c8-3d8c-403f-999c-5fc7d4d3fb3c
+		summarizeBy: none
+		sourceColumn: Mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo Convocatoria'
+		dataType: string
+		lineageTag: 93895e3b-801b-49a7-8fa6-e13ec5f4964c
+		summarizeBy: none
+		sourceColumn: Tipo Convocatoria
+
+		annotation SummarizationSetBy = Automatic
+
+	partition convocatorias = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\iPraVia\Desktop\portafolio\concursoPublico\convocatorias.csv"),[Delimiter=",", Columns=18, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"ID Convocatoria", Int64.Type}, {"Fecha Inicio Convocatoria", type date}, {"Fecha Cierre Convocatoria", type datetime}, {"Fecha Final Proceso", type datetime}, {"Ministerio", type text}, {"Servicio", type text}, {"Entidad", type text}, {"Tipo Base", type text}, {"Área de Trabajo", type text}, {"Tipo de Vacante", type text}, {"Estamento", type text}, {"Cargo", type text}, {"Región del Cargo", type text}, {"Cantidad Vacantes", Int64.Type}, {"Número Postulaciones", Int64.Type}, {"Año", Int64.Type}, {"Mes", type text}, {"Tipo Convocatoria", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+
