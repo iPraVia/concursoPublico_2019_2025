@@ -4,5 +4,5 @@ El siguiente es un analisis de los datos construido en Python de concursos publi
 
 Como producto final se obtiene un dashboard interactivo construido con Power Bi enfocado en los ministerios y cargos publicos a postular.
 
-<img src="" width=700 >
+<img src="https://github.com/iPraVia/concursoPublico_2019_2025/blob/4582d77f7109aa17dd30dfd67c5d0cdd5610c23b/dashboard.jpg" width=700 >
 
